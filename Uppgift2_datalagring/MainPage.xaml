@@ -1,0 +1,32 @@
+﻿<Page
+    x:Class="Uppgift2_datalagring.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Uppgift2_datalagring"
+    xmlns:models ="using:SharedLibrary.Models"
+    xmlns:views="using:SharedLibrary.ViewModel"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Vertical" Margin="10" Grid.Column="0">
+            <Button x:Name="btnShowForm" Content="Add Case" Width="300" Click="btnShowForm_Click"  Margin="10"/>
+            <Button x:Name="btnShowListActive" Content="Show Active Cases" Width="300" Click="btnShowListActive_Click"  Margin="10"/>
+            <Button x:Name="btnShowListClosed" Content="Show Clsosed Cases" Width="300" Click="btnShowListClosed_Click" Margin="10"/>
+        </StackPanel>
+        <SplitView Grid.Column="1">
+            <SplitView.Content >
+                <Frame  x:Name="frame"/>
+            </SplitView.Content>
+        </SplitView>
+        <!--<TextBlock Grid.Column="1" x:Name="ResultBox"/>-->
+    </Grid>
+
+</Page>
