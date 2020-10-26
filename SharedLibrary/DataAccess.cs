@@ -12,7 +12,7 @@ namespace SharedLibrary
     public static class DataAccess
     {
         private static readonly string connectionString =
-        @"Server=tcp:ec-server-aj.database.windows.net,1433;Initial Catalog=UPG2-Datalagringdb;Persist Security Info=False;User ID=sqlAdmin;Password=MyLife2020;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+        @"Server=tcp:ec-server-aj.database.windows.net,1433;Initial Catalog=UPG2-Datalagringdb;Persist Security Info=False;User ID=sqlAdmin;Password=*****;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
 
         public static async Task AddAsync(Customer customer, SupportCase supportCase)
         {
