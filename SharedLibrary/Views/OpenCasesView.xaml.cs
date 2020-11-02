@@ -53,7 +53,6 @@ namespace SharedLibrary.Views
 
             await DataAccess.UpdateAsync(Convert.ToInt32(tbCaseNumber.Text), status);
 
-            //OBS!! Uppdatera sida!
             Frame.Navigate(Frame.CurrentSourcePageType);
         }
 
