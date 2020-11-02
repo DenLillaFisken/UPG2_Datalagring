@@ -26,7 +26,6 @@
                 <Frame  x:Name="frame"/>
             </SplitView.Content>
         </SplitView>
-        <!--<TextBlock Grid.Column="1" x:Name="ResultBox"/>-->
     </Grid>
 
 </Page>
