@@ -1,8 +1,10 @@
-﻿using System;
+﻿using SharedLibrary.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -17,15 +19,14 @@ using Windows.UI.Xaml.Navigation;
 
 namespace SharedLibrary.Views
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class ClosedCasesView : Page
     {
+        public CustomerCaseListViewModel ViewModel { get; set; }
         public ClosedCasesView()
         {
             this.InitializeComponent();
-            lvOutput.ItemsSource = DataAccess.GetAll("Closed");
+
+            ViewModel = new CustomerCaseListViewModel("Closed", "");
         }
     }
 }

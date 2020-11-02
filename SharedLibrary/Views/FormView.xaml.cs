@@ -18,9 +18,6 @@ using Windows.UI.Xaml.Navigation;
 
 namespace SharedLibrary.Views
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class FormView : Page
     {
         public FormView()
@@ -31,10 +28,21 @@ namespace SharedLibrary.Views
         private async void btnAddCase_Click(object sender, RoutedEventArgs e)
         {
             Customer customer = new Customer(Convert.ToInt32(tbSSN.Text), tbName.Text, Convert.ToInt32(tbPhoneNumber.Text), tbEmail.Text);
-            SupportCase supportCase = new SupportCase(tbDescription.Text, tbTitle.Text, tbCategory.Text);
+            SupportCase supportCase = new SupportCase(tbDescription.Text, tbTitle.Text, tbCategory.Text);  
 
             await SharedLibrary.DataAccess.AddAsync(customer, supportCase);
+
+            tbSSN.Text = String.Empty;
+            tbName.Text = String.Empty;
+            tbPhoneNumber.Text = String.Empty;
+            tbEmail.Text = String.Empty;
+            tbDescription.Text = String.Empty;
+            tbTitle.Text = String.Empty;
+            tbCategory.Text = String.Empty;
+
         }
-        
+
     }
 }
+
+

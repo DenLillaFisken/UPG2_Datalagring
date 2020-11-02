@@ -22,6 +22,13 @@ namespace Uppgift2_datalagring
     /// </summary>
     sealed partial class App : Application
     {
+
+        // Connection string for using Windows Authentication.
+        //private string connectionString =
+        //    @"Data Source=YourServerName\SQLEXPRESS;Initial Catalog=NORTHWIND;Integrated Security=SSPI";
+
+        // This is an example connection string for using SQL Server Authentication.
+
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().

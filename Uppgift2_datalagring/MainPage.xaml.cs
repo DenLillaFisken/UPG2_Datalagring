@@ -19,18 +19,11 @@ using Windows.UI.Xaml.Navigation;
 
 namespace Uppgift2_datalagring
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class MainPage : Page
     {
-        //public SupportCaseViewModel ViewModel { get; set; }
         public MainPage()
         {
             this.InitializeComponent();
-            
-            //kör en konstruktor
-            //ViewModel = new SupportCaseViewModel();
         }
 
         private void btnShowForm_Click(object sender, RoutedEventArgs e)
@@ -38,7 +31,6 @@ namespace Uppgift2_datalagring
             frame.Navigate(typeof(SharedLibrary.Views.FormView));
         }
         
-
         private void btnShowListActive_Click(object sender, RoutedEventArgs e)
         {
             frame.Navigate(typeof(SharedLibrary.Views.OpenCasesView));
