@@ -13,7 +13,7 @@ namespace SharedLibrary
     
     public static class DataAccess
     {
-        private static readonly string ConnectionString = @"Server=tcp:ec-server-aj.database.windows.net,1433;Initial Catalog=UPG2-Datalagringdb;Persist Security Info=False;User ID=sqlAdmin;Password=MyLife2020;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+        private static readonly string ConnectionString = @"";
 
         public static async Task<Configuration> ReadJson()
         {
