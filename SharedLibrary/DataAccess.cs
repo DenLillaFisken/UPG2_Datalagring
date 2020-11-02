@@ -79,8 +79,7 @@ namespace SharedLibrary
                         cmd.Parameters.AddWithValue("@Name", customer.Name);
                         cmd.Parameters.AddWithValue("@PhoneNumber", customer.PhoneNumber);
                         cmd.Parameters.AddWithValue("@Email", customer.Email);
-
-                        
+    
                         await cmd.ExecuteReaderAsync();
                     }
 
@@ -102,9 +101,6 @@ namespace SharedLibrary
 
             var task = Task.Run(async () => await ReadJson());
             var number = task.Result.NumberOfItems;
-
-
-
 
             using (SqlConnection conn = new SqlConnection(ConnectionString))
             {
